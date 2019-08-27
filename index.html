@@ -1,3 +1,18 @@
 <script>
-  window.location.href="http://vod.uuucy.cn"
+var t;
+var urlj = location.search; 
+var urlnow = (location.pathname);
+//document.write("/ss"+urlnow+urlj);
+//var ua = navigator.userAgent.toLowerCase();
+var ua = navigator.userAgent.toLowerCase().match(/(ipod|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) != null; 
+if(ua)
+{
+	t=setTimeout("gomyurl()",1);
+}
+function gomyurl()
+{
+	clearTimeout(t);
+	location.href="http://vod.uuucy.cn"+urlnow+urlj;
+}
+//这个/ss/存手机端的页面，比如电脑是 www.xxx.com/55/1.html?s=1 那么会跳转到 www.xxx.com/SS/55/1.html?s=1
 </script>
